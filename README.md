@@ -23,3 +23,19 @@ The library contain:
 17. Wimax BTC (TPC) turbo code
 
 All FEC IP Cores has static configuration and constrained performance. Call me if you need any IP core extension 
+
+# cs229r_project
+
+## Harvard CS229R Project
+
+Code source: [link](https://github.com/dshekhalev/FEC)
+
+| Code        | n, k, d, q        | MAX CLK FPGA | PATH		    						 	| LUT 		  | FF 		    |
+| ----------- | -----------    | -----------  | ----------- 							 	| ----------- | ----------- |
+| BCH      	  | 255, 223, 4/9, 2  | 438.6 MHz    | berlekamp gamma reg to sigma reg      		| 576         | 315         |
+| BCH      	  | 1000, 980, 3/10, 2| 415.5 MHz    | berlekamp gamma reg to sigma reg      		| 825         | 381         |
+| LDPC     	  | 576, 480, ???, 2  | 516.8 MHz    | engine llra vn_reg			           		| 4728        | 7869        |
+| LDPC     	  | 1056, 880, ???, 2 | 517.1 MHz    | engine llra vn_reg			           		| 4235        | 7674        |
+| Hamming  	  | 511, 502, 3, 2    | 204.4 MHz    | data reg to data buffer reg			   		| 991         | 1029        |
+| Hamming  	  | 1023, 1014, 3, 2  | 181.3 MHz     | data reg to data buffer reg			   		| 1899        | 2053        |
+| RS    	  | 127, 118, 10, 256 | 390.2 MHz    | berlekamp tetta to gamma reg
